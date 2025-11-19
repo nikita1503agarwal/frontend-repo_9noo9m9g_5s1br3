@@ -2,8 +2,27 @@ import React from "react"
 import Header from "./components/Header"
 import SectionCard from "./components/SectionCard"
 import Footer from "./components/Footer"
+import {
+  Info,
+  Utensils,
+  Leaf,
+  Droplet,
+  AlertTriangle,
+  BookOpen,
+  Calendar,
+  ListChecks,
+  Egg,
+  ShieldCheck,
+  Activity,
+  Heart,
+  Target,
+  Clock,
+  CupSoda,
+} from "lucide-react"
 
 function App() {
+  const ico = (Comp) => <Comp className="w-5 h-5 md:w-6 md:h-6" />
+
   return (
     <div className="min-h-screen bg-slate-950">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(800px_400px_at_20%_10%,rgba(59,130,246,.25),transparent_60%),radial-gradient(800px_400px_at_80%_0%,rgba(34,211,238,.22),transparent_60%)]" />
@@ -16,7 +35,7 @@ function App() {
           <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">Apa itu Gizi & Dasar-Dasarnya</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <SectionCard
-              icon="ℹ️"
+              icon={ico(Info)}
               title="Apa itu gizi?"
               items={[
                 "Gizi adalah zat dari makanan yang dibutuhkan tubuh untuk tumbuh, bergerak, dan berpikir.",
@@ -28,7 +47,7 @@ function App() {
             />
 
             <SectionCard
-              icon="🍚"
+              icon={ico(Utensils)}
               title="Fungsi karbo, protein, lemak"
               items={[
                 "Karbohidrat: sumber energi utama untuk aktivitas dan belajar.",
@@ -40,7 +59,7 @@ function App() {
             />
 
             <SectionCard
-              icon="🥦"
+              icon={ico(Leaf)}
               title="Pentingnya sayur & buah"
               items={[
                 "Kaya vitamin, mineral, dan serat untuk pencernaan lancar.",
@@ -52,7 +71,7 @@ function App() {
             />
 
             <SectionCard
-              icon="💧"
+              icon={ico(Droplet)}
               title="Minum air cukup"
               items={[
                 "Target 6–8 gelas per hari; lebih saat cuaca panas/olahraga.",
@@ -64,7 +83,7 @@ function App() {
             />
 
             <SectionCard
-              icon="🍜"
+              icon={ico(AlertTriangle)}
               title="Bahaya sering makan mi instan"
               items={[
                 "Tinggi garam dan rendah protein-serat, bikin cepat lapar.",
@@ -76,7 +95,7 @@ function App() {
             />
 
             <SectionCard
-              icon="📚"
+              icon={ico(BookOpen)}
               title="Pengaruh kurang gizi terhadap belajar & ibadah"
               items={[
                 "Kurang gizi bikin mudah lelah, sulit fokus, dan cepat mengantuk.",
@@ -94,7 +113,7 @@ function App() {
           <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">Panduan Makan Seimbang Santri</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <SectionCard
-              icon="🍽️"
+              icon={ico(Calendar)}
               title="Contoh makan pagi–siang–malam"
               items={[
                 "Pagi: nasi + telur dadar + tumis sayur + buah pisang.",
@@ -106,7 +125,7 @@ function App() {
             />
 
             <SectionCard
-              icon="🥣"
+              icon={ico(ListChecks)}
               title="Porsi praktis harian"
               items={[
                 "Nasi: 1–1,5 centong per makan; sayur: 1 mangkuk kecil.",
@@ -118,7 +137,7 @@ function App() {
             />
 
             <SectionCard
-              icon="🍗"
+              icon={ico(Egg)}
               title="Pilihan lauk murah"
               items={[
                 "Tempe, tahu, telur, ikan pindang, ati ampela, kacang-kacangan.",
@@ -130,7 +149,7 @@ function App() {
             />
 
             <SectionCard
-              icon="🧁"
+              icon={ico(ShieldCheck)}
               title="Jajanan yang aman"
               items={[
                 "Pilih jajanan yang dimasak matang dan tertutup.",
@@ -142,7 +161,7 @@ function App() {
             />
 
             <SectionCard
-              icon="📅"
+              icon={ico(Calendar)}
               title="Menu harian sederhana"
               items={[
                 "Senin–Rabu: ganti-ganti sumber protein (telur, tempe, ikan).",
@@ -160,7 +179,7 @@ function App() {
           <h2 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">Info Kesehatan Santri</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <SectionCard
-              icon="💪"
+              icon={ico(Activity)}
               title="Tips jaga stamina"
               items={[
                 "Tidur 7–8 jam, kurangi begadang yang tidak perlu.",
@@ -172,7 +191,7 @@ function App() {
             />
 
             <SectionCard
-              icon="🩸"
+              icon={ico(Heart)}
               title="Cegah anemia"
               items={[
                 "Konsumsi sumber zat besi: hati ayam, daging, sayur hijau, kacang.",
@@ -184,7 +203,7 @@ function App() {
             />
 
             <SectionCard
-              icon="🧠"
+              icon={ico(Target)}
               title="Makanan untuk fokus belajar"
               items={[
                 "Karbo kompleks (nasi, roti gandum) + protein (telur/tempe).",
@@ -196,7 +215,7 @@ function App() {
             />
 
             <SectionCard
-              icon="⏰"
+              icon={ico(Clock)}
               title="Waktu makan yang baik"
               items={[
                 "Pagi 06–07, siang 12–13, malam 18–19; sesuaikan jadwal pondok.",
@@ -208,7 +227,7 @@ function App() {
             />
 
             <SectionCard
-              icon="🥤"
+              icon={ico(CupSoda)}
               title="Kurangi gula & minyak"
               items={[
                 "Batasi minuman manis kemasan; pilih air putih/infused water.",
